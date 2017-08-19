@@ -3,9 +3,7 @@
 Vue.component('posts-component', {
     data: function () {
         return {
-            message: 'elad',
             posts: [],
-            arr: [1, 2, 3, 4, 5]
         }
     },
     mounted: function () {
@@ -27,10 +25,7 @@ Vue.component('posts-component', {
 let vueApp = new Vue({
     el: '#app',
     data: {
-        greeting: 'Welcome to your Vue.js app!',
-        docsURL: 'http://vuejs.org/guide/',
-        gitterURL: 'https://gitter.im/vuejs/vue',
-        forumURL: 'http://forum.vuejs.org/',
+       
     },
     methods: {
         humanizeURL: function (url) {
