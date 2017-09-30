@@ -14,7 +14,7 @@ Vue.component('posts-component', {
                 console.log(result.error);
             } else {
                 compInstance.posts = result.feed.entries;
-                console.log(compInstance.posts);
+                // console.log(compInstance.posts);
             }
         });
     }
