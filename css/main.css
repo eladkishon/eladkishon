@@ -1,7 +1,6 @@
 
-/**
- * Basic styling
- */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 body {
   font: 400 17px/1.5 "Lekton", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #111;
@@ -13,7 +12,14 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal; }
 
+.intro-header {
+    font-family: 'Pacifico', cursive;
+    font-size: 5em;
+}
 
+.sub-intro {
+    font-size: 1.5em;
+}
 .top-buffer {
   margin-top: 30px;
 }
@@ -24,6 +30,7 @@ body {
 .wrapper {
   padding: 30px;
 }
+
 /**
  * Icons
  */
