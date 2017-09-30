@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,8 +13,12 @@
     <!--FONTS-->
 
     <!--CSS-->
+    <link href="css/skeleton.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/css.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
@@ -44,39 +48,27 @@
 
 </header>
 
+<div class="container wrapper" id="app">
 
-<div class="page-content" id="app">
-    <div class="wrapper">
+    <div class="row bottom-buffer top-buffer">
 
-        <div class="hero">
-            <p>Hey, I’m Elad — I'm a computer science & math student, software engineer, bike-rider and travel
+        <div class="offset-by-one ten columns center-align">
+            <h1>Hey, I’m Elad</h1>
+            <p> CS & math student, software engineer, bike-rider and travel
                 enthusiast.
-                I currently work @GiftWizard messing around with Node and more javascript.
-                I created <a href="https://softpillow.me/">SoftPillow</a> <a href="http://softpillow.me/"
-                                                                             class="btn btn-social-icon btn-tumblr"><img
-                        src="assets/softpillow_favicon.ico"/></a>
-                in order to build and ship incredible quality FOSS. I'm doing my best contributing to open-source
-                projects
-                like <a href="https://kiwix.org/" class="kiwix-icon">Kiwix</a>. I have participated in many hackathons
-                even some abroad organized by <a href="https://mlh.io/" class="mlh-icon">MLH</a> like <a
-                        href="https://hackthenorth.com/" class="hackthenorth-icon">Hack The North</a>,
-                <a href="https://hackupc.com/" class="hackupc-icon">HackUPC</a>. Co-founded <a
-                        href="http://hackau.com/">
-                    HackAU</a> <a href="http://hack-au.com/" class="btn btn-social-icon btn-tumblr"><img
-                        src="assets/hackau_logo_blue.png"/></a>
-                my local university hacking event.</p>
+            </p>
 
-
-            <br>
-            <!--<p class="more-info"><a href="https://eladk.me/about.html">→ Read more about me</a></p>-->
         </div>
+    </div>
 
 
-        <br>
+    <div class="row">
 
-        <div class="home">
+        <!--POSTS-->
+        <div class="three columns bottom-buffer">
 
-            <h1 class="page-heading">Posts</h1>
+
+            <h1>Posts</h1>
 
             <posts-component inline-template>
                 <ul class="post-list">
@@ -88,13 +80,78 @@
                 </ul>
             </posts-component>
 
+        </div>
 
+        <!--EVENTS-->
+        <div class="three columns bottom-buffer">
+
+
+            <h1>Events</h1>
+
+            <ul>
+                <!--<li>-->
+                    <!--<a href="https://mlh.io/" class="mlh-icon">MLH</a>-->
+                <!--</li>-->
+
+                <li>
+                    <a href="https://hackthenorth.com/" class="hackthenorth-icon">Hack The North</a>
+                </li>
+
+                <li>
+                    <a href="https://hackupc.com/" class="hackupc-icon">HackUPC</a>
+                </li>
+
+                <li>
+                    <a href="http://hackau.com/">HackAU</a>
+                    <a href="http://hack-au.com/" class="btn btn-social-icon btn-tumblr">
+                        <img src="assets/hackau_logo_blue.png"/>
+                    </a>
+                </li>
             </ul>
+
 
         </div>
 
-    </div>
+        <!--OPEN-SOURCE-->
+        <div class="three columns bottom-buffer">
+
+
+            <h1>Open-source</h1>
+
+            <ul>
+
+
+                <li><a href="https://kiwix.org/" class="kiwix-icon">Kiwix</a></li>
+
+                <li>
+                    <a href="https://softpillow.me/">SoftPillow</a>
+                    <a href="http://softpillow.me/" class="btn btn-social-icon btn-tumblr">
+                        <img src="assets/softpillow_favicon.ico"/>
+                    </a>
+                </li>
+
+                <li><a href="https://github.com/openzim">openzim</a></li>
+
+                <li><a href="https://github.com/endpoint-js">endpoint-js</a></li>
+
+            </ul>
+
+
+        </div>
+
+        <div class="three columns bottom-buffer">
+            <h1>Work</h1>
+
+
+            <ul>
+                <li><a href="https://giftwizard.co">GiftWizard</a></li>
+
+
+            </ul>
+        </div>
+
 </div>
+<!--</div>-->
 
 <footer class="site-footer">
     <div class="wrapper">
@@ -118,10 +175,12 @@
                                                     class="btn btn-social-icon ">
                         <span class="fa fa-linkedin"></span>
                     </a></li>
-                    <li class="list-inline-item"><a href="https://github.com/EladKeyshawn" class="btn btn-social-icon">
+                    <li class="list-inline-item"><a href="https://github.com/EladKeyshawn"
+                                                    class="btn btn-social-icon">
                         <span class="fa fa-github"></span>
                     </a></li>
-                    <li class="list-inline-item"><a href="https://twitter.com/eladkeyshawn" class="btn btn-social-icon">
+                    <li class="list-inline-item"><a href="https://twitter.com/eladkeyshawn"
+                                                    class="btn btn-social-icon">
                         <span class="fa fa-twitter"></span>
                     </a></li>
 
@@ -134,6 +193,8 @@
 
     </div>
 </footer>
+
+
 <script src="js/vue.min.js"></script>
 <script src="https://cdn.rawgit.com/sekando/feednami-client/master/releases/1.0.2.min.js"></script>
 <script src="js/app.js"></script>
