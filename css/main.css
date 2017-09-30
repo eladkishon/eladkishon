@@ -30,6 +30,9 @@ body {
 .wrapper {
   padding: 30px;
 }
+.header-link {
+  font-size: 1.5em;
+}
 
 /**
  * Icons
