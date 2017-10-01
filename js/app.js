@@ -1,13 +1,12 @@
 
-
 Vue.component('posts-component', {
     data: function () {
         return {
-            posts: [],
+            posts: []
         }
     },
     mounted: function () {
-        let compInstance = this;
+        var compInstance = this;
         var url = 'https://medium.com/feed/@eladk';
         feednami.load(url, function (result) {
             if (result.error) {
@@ -22,7 +21,7 @@ Vue.component('posts-component', {
 
 
 
-let vueApp = new Vue({
+var vueApp = new Vue({
     el: '#app',
     data: {
        
@@ -32,7 +31,7 @@ let vueApp = new Vue({
             return url
                 .replace(/^https?:\/\//, '')
                 .replace(/\/$/, '')
-        },
+        }
 
     }
 });
