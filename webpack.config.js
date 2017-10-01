@@ -1,15 +1,21 @@
 var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: "./entry.js",
     output: {
         path: __dirname,
-        filename: "bundle.js"
+        filename: "dist/bundle.js"
     },
     module: {
         loaders: [
-            {test: /\.css$/, loader: "style-loader!css-loader"},
-            {test: /\.(png|jpg|svg|ico)$/, loader: 'url-loader'}
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    use: "css-loader"
+                })
+            },
+            { test: /\.png|ico|svg$/, loader: "file-loader?limit=100000&name=./dist/[hash].[ext]" }
         ]
     },
     plugins: [
@@ -20,6 +26,10 @@ module.exports = {
             'process.env': {
                 NODE_ENV: '"production"'
             }
+        }),
+        new ExtractTextPlugin({
+            filename: "dist/style.css",
+            allChunks: true
         })
     ]
 
