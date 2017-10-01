@@ -1,7 +1,7 @@
 
+require('./css/skeleton.css');
 require('./css/bootstrap.min.css');
 require('./css/bootstrap-social.css');
-require('./css/skeleton.css');
 require('./css/css.css');
 require('./css/main.css');
 
