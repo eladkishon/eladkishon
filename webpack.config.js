@@ -15,7 +15,7 @@ module.exports = {
                     use: "css-loader"
                 })
             },
-            { test: /\.png|ico|svg$/, loader: "file-loader?limit=100000&name=./dist/[hash].[ext]" }
+            { test: /\.png|ico|svg$/, loader: "file-loader?limit=100000&name=dist/[hash].[ext]" }
         ]
     },
     plugins: [
@@ -28,7 +28,7 @@ module.exports = {
             }
         }),
         new ExtractTextPlugin({
-            filename: "dist/style.css",
+            filename: "style.css",
             allChunks: true
         })
     ]
