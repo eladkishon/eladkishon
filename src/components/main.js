@@ -8,7 +8,7 @@ export default ({posts}, {init}) =>
       <div class="row buffer-top">
 
           <div class="six columns">
-              <h1>Hey, I’m Elad 👋</h1>
+              <h1>Hey, I’m Elad. 👋</h1>
               <div class="thick-line"></div>
               <p> CS student, software engineer, cyclist and travel
                   enthusiast.
