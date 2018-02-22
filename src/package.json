@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/parcel watch ./index.html --out-dir ./dist --public-url ./",
-    "build": "./node_modules/.bin/parcel build ./index.html --out-dir ./dist --public-url ./ --no-minify"
+    "start": "./node_modules/.bin/parcel watch ./index.html --out-dir ../ --public-url ./",
+    "build": "./node_modules/.bin/parcel build ./index.html --out-dir ../ --public-url ./ --no-minify"
   },
   "author": "Elad Keyshawn",
   "license": "MIT",

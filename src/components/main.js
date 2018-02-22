@@ -39,7 +39,7 @@ export default ({posts}, {init}) =>
               <a href="https://github.com/EladKeyshawn" target="_blank"> Github </a> |
               <a href="https://il.linkedin.com/in/elad-keyshawn-a68938119" target="_blank"> LinkedIn </a> |
               <a href="mailto:me@elad.636@gmail.com" target="_blank"> Email </a> |
-              <a href="../assets/files/resume.pdf" target="_blank"> Resume </a>
+              <a href="../../assets/files/resume.pdf" target="_blank"> Resume </a>
 
           </h5>
       </div>
