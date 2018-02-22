@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:900,400,700");
 html, body {
     width: 100%;
-    height:100%;
-    background-color: #1d53ff;
-}
+    min-height: 100%;
+    background-image: linear-gradient(to right bottom, #051937, #071f3d, #0a2644, #0d2c4a, #113350);}
 
 .post span {
-
+    color: #fff;
 }
 .post p{
     font-weight: 800;
