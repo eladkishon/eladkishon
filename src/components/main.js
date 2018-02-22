@@ -9,6 +9,7 @@ export default ({posts}, {init}) =>
 
           <div class="six columns">
               <h1>Hey, I’m Elad 👋</h1>
+              <div class="thick-line"></div>
               <p> CS student, software engineer, cyclist and travel
                   enthusiast.
                   <br/>
@@ -19,7 +20,7 @@ export default ({posts}, {init}) =>
       </div>
 
 
-      <div class="row ">
+      <div class="row">
           <h4>Posts</h4>
           <div class="eight columns">
               {

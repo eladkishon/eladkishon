@@ -20,6 +20,14 @@ html, body {
     margin-top: 10%;
 }
 
+.thick-line {
+    width: 100%;
+    max-width: 538px;
+    height: 10px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
 h1, h5, h4, p, a {
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
