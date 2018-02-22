@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({9:[function(require,module,exports) {
+})({17:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -355,7 +355,7 @@ function app(state, actions, view, container) {
     return element;
   }
 }
-},{}],17:[function(require,module,exports) {
+},{}],29:[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -368,7 +368,7 @@ module.exports = function bind(fn, thisArg) {
   };
 };
 
-},{}],39:[function(require,module,exports) {
+},{}],75:[function(require,module,exports) {
 /*!
  * Determine if an object is a Buffer
  *
@@ -391,7 +391,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],15:[function(require,module,exports) {
+},{}],27:[function(require,module,exports) {
 'use strict';
 
 var bind = require('./helpers/bind');
@@ -696,7 +696,7 @@ module.exports = {
   trim: trim
 };
 
-},{"./helpers/bind":17,"is-buffer":39}],25:[function(require,module,exports) {
+},{"./helpers/bind":29,"is-buffer":75}],46:[function(require,module,exports) {
 'use strict';
 
 var utils = require('../utils');
@@ -710,7 +710,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
   });
 };
 
-},{"../utils":15}],38:[function(require,module,exports) {
+},{"../utils":27}],73:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -733,7 +733,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
   return error;
 };
 
-},{}],31:[function(require,module,exports) {
+},{}],57:[function(require,module,exports) {
 'use strict';
 
 var enhanceError = require('./enhanceError');
@@ -753,7 +753,7 @@ module.exports = function createError(message, config, code, request, response) 
   return enhanceError(error, config, code, request, response);
 };
 
-},{"./enhanceError":38}],30:[function(require,module,exports) {
+},{"./enhanceError":73}],53:[function(require,module,exports) {
 'use strict';
 
 var createError = require('./createError');
@@ -781,7 +781,7 @@ module.exports = function settle(resolve, reject, response) {
   }
 };
 
-},{"./createError":31}],28:[function(require,module,exports) {
+},{"./createError":57}],54:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -851,7 +851,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
   return url;
 };
 
-},{"./../utils":15}],29:[function(require,module,exports) {
+},{"./../utils":27}],55:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -906,7 +906,7 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
-},{"./../utils":15}],33:[function(require,module,exports) {
+},{"./../utils":27}],56:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -976,7 +976,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":15}],32:[function(require,module,exports) {
+},{"./../utils":27}],58:[function(require,module,exports) {
 'use strict';
 
 // btoa polyfill for IE<10 courtesy https://github.com/davidchambers/Base64.js
@@ -1014,7 +1014,7 @@ function btoa(input) {
 
 module.exports = btoa;
 
-},{}],34:[function(require,module,exports) {
+},{}],59:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1069,7 +1069,7 @@ module.exports = (
   })()
 );
 
-},{"./../utils":15}],24:[function(require,module,exports) {
+},{"./../utils":27}],45:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1096,7 +1096,7 @@ module.exports = function xhrAdapter(config) {
     // For IE 8/9 CORS support
     // Only supports POST and GET calls and doesn't returns the response headers.
     // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
-    if ('development' !== 'test' && typeof window !== 'undefined' && window.XDomainRequest && !('withCredentials' in request) && !isURLSameOrigin(config.url)) {
+    if ('production' !== 'test' && typeof window !== 'undefined' && window.XDomainRequest && !('withCredentials' in request) && !isURLSameOrigin(config.url)) {
       request = new window.XDomainRequest();
       loadEvent = 'onload';
       xDomain = true;
@@ -1244,7 +1244,7 @@ module.exports = function xhrAdapter(config) {
     request.send(requestData);
   });
 };
-},{"./../utils":15,"./../core/settle":30,"./../helpers/buildURL":28,"./../helpers/parseHeaders":29,"./../helpers/isURLSameOrigin":33,"../core/createError":31,"./../helpers/btoa":32,"./../helpers/cookies":34}],23:[function(require,module,exports) {
+},{"./../utils":27,"./../core/settle":53,"./../helpers/buildURL":54,"./../helpers/parseHeaders":55,"./../helpers/isURLSameOrigin":56,"../core/createError":57,"./../helpers/btoa":58,"./../helpers/cookies":59}],43:[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -1431,7 +1431,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],16:[function(require,module,exports) {
+},{}],28:[function(require,module,exports) {
 var process = require("process");
 'use strict';
 
@@ -1526,7 +1526,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-},{"./utils":15,"./helpers/normalizeHeaderName":25,"./adapters/xhr":24,"./adapters/http":24,"process":23}],26:[function(require,module,exports) {
+},{"./utils":27,"./helpers/normalizeHeaderName":46,"./adapters/xhr":45,"./adapters/http":45,"process":43}],49:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1580,7 +1580,7 @@ InterceptorManager.prototype.forEach = function forEach(fn) {
 
 module.exports = InterceptorManager;
 
-},{"./../utils":15}],35:[function(require,module,exports) {
+},{"./../utils":27}],67:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1602,14 +1602,14 @@ module.exports = function transformData(data, headers, fns) {
   return data;
 };
 
-},{"./../utils":15}],21:[function(require,module,exports) {
+},{"./../utils":27}],34:[function(require,module,exports) {
 'use strict';
 
 module.exports = function isCancel(value) {
   return !!(value && value.__CANCEL__);
 };
 
-},{}],36:[function(require,module,exports) {
+},{}],68:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1625,7 +1625,7 @@ module.exports = function isAbsoluteURL(url) {
   return /^([a-z][a-z\d\+\-\.]*:)?\/\//i.test(url);
 };
 
-},{}],37:[function(require,module,exports) {
+},{}],69:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1641,7 +1641,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
     : baseURL;
 };
 
-},{}],27:[function(require,module,exports) {
+},{}],50:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./../utils');
@@ -1729,7 +1729,7 @@ module.exports = function dispatchRequest(config) {
   });
 };
 
-},{"./../utils":15,"./transformData":35,"../cancel/isCancel":21,"../defaults":16,"./../helpers/isAbsoluteURL":36,"./../helpers/combineURLs":37}],18:[function(require,module,exports) {
+},{"./../utils":27,"./transformData":67,"../cancel/isCancel":34,"../defaults":28,"./../helpers/isAbsoluteURL":68,"./../helpers/combineURLs":69}],30:[function(require,module,exports) {
 'use strict';
 
 var defaults = require('./../defaults');
@@ -1810,7 +1810,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = Axios;
 
-},{"./../defaults":16,"./../utils":15,"./InterceptorManager":26,"./dispatchRequest":27}],20:[function(require,module,exports) {
+},{"./../defaults":28,"./../utils":27,"./InterceptorManager":49,"./dispatchRequest":50}],31:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1831,7 +1831,7 @@ Cancel.prototype.__CANCEL__ = true;
 
 module.exports = Cancel;
 
-},{}],19:[function(require,module,exports) {
+},{}],32:[function(require,module,exports) {
 'use strict';
 
 var Cancel = require('./Cancel');
@@ -1890,7 +1890,7 @@ CancelToken.source = function source() {
 
 module.exports = CancelToken;
 
-},{"./Cancel":20}],22:[function(require,module,exports) {
+},{"./Cancel":31}],33:[function(require,module,exports) {
 'use strict';
 
 /**
@@ -1919,7 +1919,7 @@ module.exports = function spread(callback) {
   };
 };
 
-},{}],14:[function(require,module,exports) {
+},{}],25:[function(require,module,exports) {
 'use strict';
 
 var utils = require('./utils');
@@ -1973,9 +1973,9 @@ module.exports = axios;
 // Allow use of default import syntax in TypeScript
 module.exports.default = axios;
 
-},{"./utils":15,"./helpers/bind":17,"./core/Axios":18,"./defaults":16,"./cancel/Cancel":20,"./cancel/CancelToken":19,"./cancel/isCancel":21,"./helpers/spread":22}],13:[function(require,module,exports) {
+},{"./utils":27,"./helpers/bind":29,"./core/Axios":30,"./defaults":28,"./cancel/Cancel":31,"./cancel/CancelToken":32,"./cancel/isCancel":34,"./helpers/spread":33}],23:[function(require,module,exports) {
 module.exports = require('./lib/axios');
-},{"./lib/axios":14}],10:[function(require,module,exports) {
+},{"./lib/axios":25}],19:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2013,7 +2013,7 @@ exports.default = {
     }
 
 };
-},{"axios":13}],11:[function(require,module,exports) {
+},{"axios":23}],20:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2022,7 +2022,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = {
     posts: []
 };
-},{}],6:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2121,82 +2121,9 @@ exports.default = function (_ref, _ref2) {
         )
     );
 };
-},{"hyperapp":9}],12:[function(require,module,exports) {
-var bundleURL = null;
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+},{"hyperapp":17}],9:[function(require,module,exports) {
 
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error;
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-
-},{}],8:[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-  newLink.onload = function () {
-    link.remove();
-  };
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-
-},{"./bundle-url":12}],4:[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":8}],5:[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"_css_loader":8}],7:[function(require,module,exports) {
+},{}],12:[function(require,module,exports) {
 "use strict";
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -2218,7 +2145,7 @@ window.feednami = {}, feednami.load = function (e, n) {
 }, feednami.loadGoogleFormat = function (e, n) {
   return feednami.load({ url: e, format: "google", includeXml: !0 }, n);
 };
-},{}],2:[function(require,module,exports) {
+},{}],5:[function(require,module,exports) {
 'use strict';
 
 var _hyperapp = require('hyperapp');
@@ -2243,126 +2170,4 @@ require('./css/main.css');
 require('./js/feednami.min');
 
 (0, _hyperapp.app)(_state2.default, _actions2.default, _main2.default, document.body);
-},{"hyperapp":9,"./actions":10,"./state":11,"./components/main":6,"./css/skeleton.css":4,"./css/main.css":5,"./js/feednami.min":7}],40:[function(require,module,exports) {
-
-var global = (1, eval)('this');
-var OldModule = module.bundle.Module;
-function Module() {
-  OldModule.call(this);
-  this.hot = {
-    accept: function (fn) {
-      this._acceptCallback = fn || function () {};
-    },
-    dispose: function (fn) {
-      this._disposeCallback = fn;
-    }
-  };
-}
-
-module.bundle.Module = Module;
-
-if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
-  var hostname = '' || location.hostname;
-  var ws = new WebSocket('ws://' + hostname + ':' + '61176' + '/');
-  ws.onmessage = function (event) {
-    var data = JSON.parse(event.data);
-
-    if (data.type === 'update') {
-      data.assets.forEach(function (asset) {
-        hmrApply(global.require, asset);
-      });
-
-      data.assets.forEach(function (asset) {
-        if (!asset.isNew) {
-          hmrAccept(global.require, asset.id);
-        }
-      });
-    }
-
-    if (data.type === 'reload') {
-      ws.close();
-      ws.onclose = function () {
-        location.reload();
-      };
-    }
-
-    if (data.type === 'error-resolved') {
-      console.log('[parcel] ✨ Error resolved');
-    }
-
-    if (data.type === 'error') {
-      console.error('[parcel] 🚨  ' + data.error.message + '\n' + 'data.error.stack');
-    }
-  };
-}
-
-function getParents(bundle, id) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return [];
-  }
-
-  var parents = [];
-  var k, d, dep;
-
-  for (k in modules) {
-    for (d in modules[k][1]) {
-      dep = modules[k][1][d];
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(+k);
-      }
-    }
-  }
-
-  if (bundle.parent) {
-    parents = parents.concat(getParents(bundle.parent, id));
-  }
-
-  return parents;
-}
-
-function hmrApply(bundle, asset) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return;
-  }
-
-  if (modules[asset.id] || !bundle.parent) {
-    var fn = new Function('require', 'module', 'exports', asset.generated.js);
-    asset.isNew = !modules[asset.id];
-    modules[asset.id] = [fn, asset.deps];
-  } else if (bundle.parent) {
-    hmrApply(bundle.parent, asset);
-  }
-}
-
-function hmrAccept(bundle, id) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return;
-  }
-
-  if (!modules[id] && bundle.parent) {
-    return hmrAccept(bundle.parent, id);
-  }
-
-  var cached = bundle.cache[id];
-  if (cached && cached.hot._disposeCallback) {
-    cached.hot._disposeCallback();
-  }
-
-  delete bundle.cache[id];
-  bundle(id);
-
-  cached = bundle.cache[id];
-  if (cached && cached.hot && cached.hot._acceptCallback) {
-    cached.hot._acceptCallback();
-    return true;
-  }
-
-  return getParents(global.require, id).some(function (id) {
-    return hmrAccept(global.require, id);
-  });
-}
-},{}]},{},[40,2])
-//# sourceMappingURL=EladKeyshawn.map
+},{"hyperapp":17,"./actions":19,"./state":20,"./components/main":11,"./css/skeleton.css":9,"./css/main.css":9,"./js/feednami.min":12}]},{},[5])
