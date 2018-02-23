@@ -25,9 +25,9 @@ export default ({posts}, {init}) =>
           <div class="eight columns">
               {
                   posts.map(post => {
-                      return <div class="post">
+                      return <div class="">
                           <span>{post.date}</span>
-                          <a href={post.link} target="_blank"><p>{post.title}</p></a>
+                          <h5><a href={post.link} target="_blank">{post.title}</a></h5>
                       </div>
                   })
               }
@@ -44,7 +44,6 @@ export default ({posts}, {init}) =>
               <a href="https://il.linkedin.com/in/elad-keyshawn-a68938119" target="_blank"> LinkedIn </a> |
               <a href="mailto:me@elad.636@gmail.com" target="_blank"> Email </a> |
               <a href="../../assets/files/resume.pdf" target="_blank"> Resume </a>
-
           </h5>
 
       </div>
