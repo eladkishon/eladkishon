@@ -1,4 +1,5 @@
-
+import moment from 'moment'
+import _ from 'lodash'
 export default {
 
     init: () => (state, actions) => {
@@ -8,7 +9,11 @@ export default {
             if (result.error) {
                 console.log(result.error);
             } else {
-                actions.showPosts(result.feed.entries);
+
+                actions.showPosts(_.map(result.feed.entries, post=> {
+                    post.date = moment(post.date).format("DD/MM/YYYY");
+                    return post;
+                }));
             }
         });
 

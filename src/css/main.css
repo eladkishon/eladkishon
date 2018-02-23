@@ -2,11 +2,10 @@
 html, body {
     width: 100%;
     min-height: 100%;
+    color: #fff;
     background-image: linear-gradient(to right bottom, #051937, #071f3d, #0a2644, #0d2c4a, #113350);}
 
-.post span {
-    color: #fff;
-}
+
 .post p{
     font-weight: 800;
     text-decoration: none;

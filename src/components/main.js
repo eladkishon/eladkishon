@@ -46,7 +46,11 @@ export default ({posts}, {init}) =>
               <a href="../../assets/files/resume.pdf" target="_blank"> Resume </a>
 
           </h5>
+
       </div>
+
+
+
 
 
 
