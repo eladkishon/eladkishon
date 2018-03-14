@@ -17,6 +17,10 @@ html, body {
     margin-top: 10%;
 }
 
+.buffer-top-half {
+    margin-top: 6%;
+}
+
 .thick-line {
     width: 100%;
     max-width: 538px;

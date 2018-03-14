@@ -5,7 +5,7 @@ import {Link,Route} from "@hyperapp/router"
 export default ({posts},children) =>
 
 <div>
-    <div class="row buffer-top">
+    <div class="row buffer-top-half">
 
         <div class="six columns">
             {/*<Link to="/api">API</Link>*/}
@@ -19,6 +19,8 @@ export default ({posts},children) =>
 
         </div>
     </div>
+
+    --------------------------------------------------------------------------------
 
 
     <div class="row">
@@ -38,8 +40,10 @@ export default ({posts},children) =>
 
     </div>
 
+    --------------------------------------------------------------------------------
 
-    <div class="row buffer-top">
+
+    <div class="row">
         <p>You can find me on:</p>
         <h5>
             <a href="https://github.com/EladKeyshawn" target="_blank"> Github </a> |
@@ -47,6 +51,9 @@ export default ({posts},children) =>
             <a href="mailto:me@elad.636@gmail.com" target="_blank"> Email </a> |
             <a href="../../assets/files/resume.pdf" target="_blank"> Resume </a>
         </h5>
+
+        <span>pgp imprint: 8DD2 91AE 335D C758</span>
+
 
     </div>
 </div>
