@@ -2,8 +2,10 @@
 html, body {
     width: 100%;
     min-height: 100%;
-    color: #fff;
-    background-image: linear-gradient(to right bottom, #051937, #071f3d, #0a2644, #0d2c4a, #113350);}
+    color: black;
+    background-color: white;
+    /*background-image: linear-gradient(to right bottom, #051937, #071f3d, #0a2644, #0d2c4a, #113350);*/
+}
 
 
 .post p{
@@ -25,7 +27,7 @@ html, body {
     width: 100%;
     max-width: 538px;
     height: 10px;
-    background-color: #fff;
+    background-color: black;
     margin-bottom: 15px;
 }
 
@@ -33,7 +35,7 @@ h1, h5, h4, p, a {
     -webkit-font-smoothing: antialiased;
     text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
     font-family: 'Heebo', sans-serif;
-    color: #fff;
+    color: black;
 }
 
 
