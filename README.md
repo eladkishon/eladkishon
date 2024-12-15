@@ -1,7 +1,8 @@
-### Hi there 👋
+### Hello 👋
 
-brainyhere.com
-flyonwards.xyz
+http://brainyhere.com
+
+http://flyonwards.xyz
 <!--
 **EladKeyshawn/eladkeyshawn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
